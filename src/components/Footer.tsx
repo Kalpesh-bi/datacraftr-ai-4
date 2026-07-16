@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <Link to="/contact?consultation=true" className="btn-primary">
-              Get Free Consultation
+              Book Free Consultation
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
