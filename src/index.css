@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-white text-navy-900 font-sans transition-colors duration-300;
+  }
+  .dark body {
+    @apply bg-navy-950 text-navy-100;
+  }
+  ::selection {
+    @apply bg-navy-500/20 text-navy-700;
+  }
+  .dark ::selection {
+    @apply bg-navy-400/30 text-navy-200;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-navy-100;
+  }
+  .dark .glass {
+    @apply bg-navy-900/70 border-white/10;
+  }
+  .glass-dark {
+    @apply bg-navy-900/70 backdrop-blur-xl border border-white/10;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-navy-600 via-navy-500 to-navy-400 bg-clip-text text-transparent;
+  }
+  .gradient-text-navy {
+    @apply bg-gradient-to-r from-navy-800 via-navy-700 to-navy-500 bg-clip-text text-transparent;
+  }
+  .dark .gradient-text-navy {
+    @apply from-navy-300 via-navy-200 to-navy-100;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-navy-700 text-white font-semibold transition-all duration-300 hover:bg-navy-800 hover:shadow-glow-navy hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-navy-900 text-white font-semibold transition-all duration-300 hover:bg-navy-800 hover:-translate-y-0.5 active:translate-y-0;
+    @apply dark:bg-navy-800 dark:hover:bg-navy-700;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-navy-200 text-navy-800 font-semibold transition-all duration-300 hover:border-navy-500 hover:text-navy-600 hover:-translate-y-0.5 active:translate-y-0;
+    @apply dark:border-navy-700 dark:text-navy-200 dark:hover:border-navy-400 dark:hover:text-navy-200;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-navy-700 font-medium transition-all duration-200 hover:bg-navy-50;
+    @apply dark:text-navy-200 dark:hover:bg-navy-800;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-navy-100 shadow-card transition-all duration-300;
+    @apply dark:bg-navy-900 dark:border-navy-800;
+  }
+  .card-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-1 hover:border-navy-300;
+    @apply dark:hover:border-navy-600;
+  }
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-navy-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-navy-500/30 focus:border-navy-500;
+    @apply dark:bg-navy-800 dark:border-navy-700 dark:text-navy-100 dark:placeholder-navy-500;
+  }
+  .nav-link {
+    @apply relative text-navy-700 hover:text-navy-900 font-medium transition-colors duration-200;
+    @apply dark:text-navy-200 dark:hover:text-white;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-500 transition-all duration-300;
+  }
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Premium Light Grid */
+  .bg-grid {
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+      linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Dark Mode Grid */
+  .dark .bg-grid {
+    background-color: #020617;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-grid-dark {
+    background-color: #020617;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(59,130,246,0.15),
+      transparent
+    );
+    background-size: 200% 100%;
+  }
+}
