@@ -17,22 +17,35 @@ export default function AnimatedCounter({
   className = '',
 }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-50px' });
-  const [count, setCount] = useState(0);
+
+  const inView = useInView(ref, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const [count, setCount] = useState(value);
 
   useEffect(() => {
     if (!inView) return;
-    let start = 0;
-    const startTime = performance.now();
-    const animate = (now: number) => {
-      const elapsed = (now - startTime) / 1000;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      start = Math.floor(eased * value);
-      setCount(start);
-      if (progress < 1) requestAnimationFrame(animate);
-      else setCount(value);
+
+    let startTime: number;
+
+    const animate = (time: number) => {
+      if (!startTime) startTime = time;
+
+      const progress = Math.min((time - startTime) / (duration * 1000), 1);
+
+      const current = Math.floor(progress * value);
+
+      setCount(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(value);
+      }
     };
+
     requestAnimationFrame(animate);
   }, [inView, value, duration]);
 
