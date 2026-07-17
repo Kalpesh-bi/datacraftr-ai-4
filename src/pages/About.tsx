@@ -12,7 +12,7 @@ const values = [
 ];
 
 const team = [
-  { name: 'Engineering', count: 3, desc: 'Full-stack engineers, data scientists, and AI specialists.' },
+  { name: 'Engineering', count: 2, desc: 'Full-stack engineers, data scientists, and AI specialists.' },
   { name: 'Design', count: 1, desc: 'UI/UX designers and motion graphics artists.' },
   { name: 'Data & Analytics', count: 1, desc: 'Data engineers, analysts, and BI experts.' },
   { name: 'Project Management', count: 1, desc: 'Dedicated project managers and scrum masters.' },
