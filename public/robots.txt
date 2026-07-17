@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datacraftr.vercel.app/sitemap.xml
