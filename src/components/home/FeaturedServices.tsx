@@ -7,12 +7,12 @@ import { services } from '../../lib/data';
 export default function FeaturedServices() {
   const featured = services.slice(0, 6);
   return (
-    <section className="section-padding bg-white dark:bg-navy-950">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <SectionHeading
           eyebrow="Our Services"
-          title="Everything you need to build and scale"
-          subtitle="From custom websites to AI automation and proprietary software — we cover the full spectrum of your technology needs."
+          title="Solutions built for your business"
+          subtitle="From custom websites to AI automation and data analytics — we deliver technology that drives measurable results."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

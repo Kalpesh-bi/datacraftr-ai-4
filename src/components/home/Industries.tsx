@@ -4,11 +4,11 @@ import { industries } from '../../lib/data';
 
 export default function Industries() {
   return (
-    <section className="section-padding bg-white dark:bg-navy-950">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <SectionHeading
           eyebrow="Industries"
-          title="We serve ambitious businesses across industries"
+          title="Trusted across industries"
           subtitle="From fintech to healthcare, we bring deep domain expertise to every project."
         />
 
@@ -22,11 +22,11 @@ export default function Industries() {
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="group card card-hover p-5 text-center cursor-default"
             >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">
                 {industry.icon}
               </div>
-              <h3 className="font-semibold text-navy-900 text-sm mb-1">{industry.name}</h3>
-              <p className="text-xs text-navy-500 leading-relaxed">{industry.description}</p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-1">{industry.name}</h3>
+              <p className="text-xs text-gray-500 leading-relaxed">{industry.description}</p>
             </motion.div>
           ))}
         </div>

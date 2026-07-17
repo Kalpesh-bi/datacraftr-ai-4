@@ -26,11 +26,11 @@ export default function SectionHeading({
           transition={{ duration: 0.4 }}
           className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4 ${
             dark
-              ? 'bg-navy-500/10 text-navy-400 border border-navy-500/20'
-              : 'bg-navy-50 text-navy-700 border border-navy-200'
+              ? 'bg-brand-500/10 text-gray-400 border border-brand-500/20'
+              : 'bg-gray-50 text-gray-700 border border-gray-200'
           }`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-navy-500 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
           {eyebrow}
         </motion.span>
       )}
@@ -40,7 +40,7 @@ export default function SectionHeading({
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className={`font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance ${
-          dark ? 'text-white' : 'text-navy-900'
+          dark ? 'text-white' : 'text-gray-900'
         }`}
       >
         {title}
@@ -51,7 +51,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`mt-4 text-lg leading-relaxed ${dark ? 'text-navy-200' : 'text-navy-600'}`}
+          className={`mt-4 text-lg leading-relaxed ${dark ? 'text-gray-700' : 'text-gray-600'}`}
         >
           {subtitle}
         </motion.p>

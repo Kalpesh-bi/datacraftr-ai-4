@@ -9,9 +9,8 @@ export function useTheme() {
     const stored = localStorage.getItem('datacraftr-theme') as Theme | null;
     if (stored === 'light' || stored === 'dark') {
       setTheme(stored);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
     }
+    // Default to light — premium light theme
   }, []);
 
   useEffect(() => {

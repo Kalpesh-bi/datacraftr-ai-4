@@ -18,11 +18,11 @@ export default function ServiceDetail() {
   return (
     <div className="pt-16 lg:pt-20">
       {/* Hero */}
-      <section className="relative py-16 lg:py-24 bg-navy-950 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-dark opacity-30" />
-        <div className={`absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-br ${service.color} opacity-15 blur-[120px] rounded-full`} />
+      <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-50" />
+        <div className={`absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-br ${service.color} opacity-10 blur-[120px] rounded-full`} />
         <div className="relative container-custom px-4 sm:px-6 lg:px-8">
-          <Link to="/services" className="inline-flex items-center gap-1.5 text-sm text-navy-300 hover:text-navy-400 transition-colors mb-6">
+          <Link to="/services" className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-brand-600 transition-colors mb-6">
             <ArrowLeft className="w-4 h-4" />
             All Services
           </Link>
@@ -32,14 +32,14 @@ export default function ServiceDetail() {
             </div>
             <div>
               {service.badge && (
-                <span className={`badge mb-3 ${service.badge === 'NEW' ? 'bg-navy-500 text-white' : 'bg-navy-700 text-white'}`}>
+                <span className={`badge mb-3 ${service.badge === 'NEW' ? 'bg-brand-500 text-white' : 'bg-brand-700 text-white'}`}>
                   {service.badge}
                 </span>
               )}
-              <h1 className="font-display text-3xl lg:text-5xl font-bold text-white tracking-tight">
+              <h1 className="font-display text-3xl lg:text-5xl font-bold text-gray-900 tracking-tight">
                 {service.title}
               </h1>
-              <p className="mt-3 text-lg text-navy-200 max-w-2xl">{service.short}</p>
+              <p className="mt-3 text-lg text-gray-600 max-w-2xl">{service.short}</p>
             </div>
           </div>
         </div>
@@ -56,25 +56,25 @@ export default function ServiceDetail() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-display text-2xl font-bold text-navy-900 mb-4">Overview</h2>
-                <p className="text-navy-600 leading-relaxed mb-8">{service.description}</p>
+                <h2 className="font-display text-2xl font-bold text-gray-900 mb-4">Overview</h2>
+                <p className="text-gray-600 leading-relaxed mb-8">{service.description}</p>
 
-                <h2 className="font-display text-2xl font-bold text-navy-900 mb-4">What's Included</h2>
+                <h2 className="font-display text-2xl font-bold text-gray-900 mb-4">What's Included</h2>
                 <div className="grid sm:grid-cols-2 gap-3 mb-8">
                   {service.features.map((f) => (
-                    <div key={f} className="flex items-start gap-2.5 p-3 rounded-xl bg-navy-50">
-                      <div className="w-5 h-5 rounded-full bg-navy-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div key={f} className="flex items-start gap-2.5 p-3 rounded-xl bg-gray-50">
+                      <div className="w-5 h-5 rounded-full bg-brand-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-white" />
                       </div>
-                      <span className="text-sm text-navy-700 font-medium">{f}</span>
+                      <span className="text-sm text-gray-700 font-medium">{f}</span>
                     </div>
                   ))}
                 </div>
 
-                <h2 className="font-display text-2xl font-bold text-navy-900 mb-4">Technology Stack</h2>
+                <h2 className="font-display text-2xl font-bold text-gray-900 mb-4">Technology Stack</h2>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {service.technologies.map((t) => (
-                    <span key={t} className="px-3 py-1.5 rounded-lg bg-white border border-navy-200 text-navy-700 text-sm font-medium shadow-sm">
+                    <span key={t} className="px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm font-medium shadow-sm">
                       {t}
                     </span>
                   ))}
@@ -87,8 +87,8 @@ export default function ServiceDetail() {
               <div className="sticky top-24 space-y-4">
                 {/* CTA card */}
                 <div className="card p-6">
-                  <h3 className="font-display font-bold text-navy-900 mb-2">Interested in this service?</h3>
-                  <p className="text-sm text-navy-600 mb-4">Get a free consultation and custom quote.</p>
+                  <h3 className="font-display font-bold text-gray-900 mb-2">Interested in this service?</h3>
+                  <p className="text-sm text-gray-600 mb-4">Get a free consultation and custom quote.</p>
                   <Link to="/contact?consultation=true" className="btn-primary w-full mb-2">
                     Get Free Consultation
                     <ArrowRight className="w-4 h-4" />
@@ -99,7 +99,7 @@ export default function ServiceDetail() {
                     rel="noopener noreferrer"
                     className="btn-outline w-full"
                   >
-                    <MessageCircle className="w-4 h-4 text-navy-600" />
+                    <MessageCircle className="w-4 h-4 text-gray-600" />
                     WhatsApp Us
                   </a>
                 </div>
@@ -111,7 +111,7 @@ export default function ServiceDetail() {
                       <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <p className="text-sm text-navy-600">
+                  <p className="text-sm text-gray-600">
                     Rated 4.9/5 by clients for this service category.
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* Related services */}
-      <section className="section-padding bg-navy-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <SectionHeading title="Related services" />
           <div className="grid sm:grid-cols-3 gap-6">
@@ -137,10 +137,10 @@ export default function ServiceDetail() {
                   <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} text-white mb-3`}>
                     <RIcon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-semibold text-navy-900 group-hover:text-navy-600 transition-colors mb-1">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-gray-600 transition-colors mb-1">
                     {s.title}
                   </h3>
-                  <p className="text-sm text-navy-600">{s.short}</p>
+                  <p className="text-sm text-gray-600">{s.short}</p>
                 </Link>
               );
             })}

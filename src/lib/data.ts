@@ -59,7 +59,7 @@ export const services: Service[] = [
     ],
     technologies: ['Shopify', 'Stripe', 'React', 'Supabase'],
     badge: 'POPULAR',
-    color: 'from-navy-500 to-emerald-500',
+    color: 'from-brand-500 to-emerald-500',
   },
   {
     slug: 'ai-automation',
@@ -205,7 +205,7 @@ export const services: Service[] = [
       'Priority support channel',
     ],
     technologies: ['Sentry', 'Datadog', 'GitHub Actions'],
-    color: 'from-emerald-500 to-navy-500',
+    color: 'from-emerald-500 to-brand-500',
   },
   {
     slug: 'preemption-algo-software',
@@ -222,7 +222,7 @@ export const services: Service[] = [
     ],
     technologies: ['Python', 'React', 'WebSocket', 'Supabase'],
     badge: 'NEW',
-    color: 'from-navy-500 to-navy-600',
+    color: 'from-brand-500 to-brand-600',
   },
 ];
 

@@ -100,25 +100,25 @@ export default function Software() {
   return (
     <div className="pt-16 lg:pt-20">
       {/* Hero */}
-      <section className="relative py-16 lg:py-24 bg-navy-950 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-dark opacity-30" />
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-navy-500/15 blur-[140px] rounded-full" />
+      <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-50" />
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-brand-500/8 blur-[140px] rounded-full" />
 
         <div className="relative container-custom px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy-500/10 border border-navy-500/20 text-navy-400 text-sm font-semibold mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-sm font-semibold mb-6"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-navy-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
               Flagship Software Product
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="font-display text-4xl lg:text-6xl font-bold text-white tracking-tight text-balance"
+              className="font-display text-4xl lg:text-6xl font-bold text-gray-900 tracking-tight text-balance"
             >
               PREEMPTION
             </motion.h1>
@@ -126,7 +126,7 @@ export default function Software() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="mt-3 text-lg text-navy-400 font-semibold"
+              className="mt-3 text-lg text-brand-700 font-semibold"
             >
               Professional Multi-Broker Algorithmic Trading & Order Management System
             </motion.p>
@@ -134,7 +134,7 @@ export default function Software() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-5 text-lg lg:text-xl text-navy-200 leading-relaxed max-w-3xl mx-auto"
+              className="mt-5 text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
             >
               A high-performance desktop-based Order Management System (OMS) built for professional
               traders, proprietary trading firms, portfolio managers, and algorithmic trading
@@ -151,12 +151,12 @@ export default function Software() {
                 <Play className="w-4 h-4" />
                 Book Demo
               </button>
-              <a href={PREEMPTION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-all">
-                <Zap className="w-4 h-4 text-navy-400" />
+              <a href={PREEMPTION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-200 text-gray-800 font-semibold hover:border-brand-500 hover:text-brand-600 hover:-translate-y-0.5 transition-all">
+                <Zap className="w-4 h-4 text-brand-600" />
                 Enquire on WhatsApp
               </a>
-              <a href="#brochure" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-all">
-                <Download className="w-4 h-4 text-navy-400" />
+              <a href="#brochure" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-200 text-gray-800 font-semibold hover:border-brand-500 hover:text-brand-600 hover:-translate-y-0.5 transition-all">
+                <Download className="w-4 h-4 text-brand-600" />
                 Download Brochure
               </a>
             </motion.div>
@@ -165,13 +165,13 @@ export default function Software() {
       </section>
 
       {/* Overview / Description */}
-      <section className="section-padding bg-white dark:bg-navy-950">
+      <section className="section-padding bg-white dark:bg-gray-50">
         <div className="container-custom max-w-4xl">
           <SectionHeading
             eyebrow="Overview"
             title="Built for speed, reliability, and flexibility"
           />
-          <div className="space-y-4 text-navy-600 dark:text-navy-300 leading-relaxed text-lg">
+          <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
             <p>
               PREEMPTION is a high-performance desktop-based Order Management System (OMS) built for
               professional traders, proprietary trading firms, portfolio managers, and algorithmic
@@ -191,7 +191,7 @@ export default function Software() {
       </section>
 
       {/* Key Features */}
-      <section className="section-padding bg-navy-50 dark:bg-navy-900">
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Key Features"
@@ -208,11 +208,11 @@ export default function Software() {
                 transition={{ duration: 0.4, delay: (i % 4) * 0.05 }}
                 className="card card-hover p-5"
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-navy-500 to-navy-600 flex items-center justify-center mb-3">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center mb-3">
                   <f.icon className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="font-semibold text-navy-900 dark:text-white text-sm mb-1.5">{f.title}</h3>
-                <p className="text-xs text-navy-600 dark:text-navy-400 leading-relaxed">{f.desc}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1.5">{f.title}</h3>
+                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{f.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -220,7 +220,7 @@ export default function Software() {
       </section>
 
       {/* Dashboard preview */}
-      <section className="section-padding bg-white dark:bg-navy-950">
+      <section className="section-padding bg-white dark:bg-gray-50">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Dashboard Preview"
@@ -232,7 +232,7 @@ export default function Software() {
       </section>
 
       {/* Workflow */}
-      <section className="section-padding bg-navy-50 dark:bg-navy-900">
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <SectionHeading
             eyebrow="How It Works"
@@ -251,13 +251,13 @@ export default function Software() {
               >
                 <div className="card p-5 h-full">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-navy-500/10 border border-navy-500/20 flex items-center justify-center">
-                      <step.icon className="w-5 h-5 text-navy-600 dark:text-navy-400" />
+                    <div className="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center">
+                      <step.icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                     </div>
-                    <span className="text-2xl font-bold text-navy-200 dark:text-navy-700">0{i + 1}</span>
+                    <span className="text-2xl font-bold text-gray-700 dark:text-gray-700">0{i + 1}</span>
                   </div>
-                  <h3 className="font-semibold text-navy-900 dark:text-white mb-1.5">{step.title}</h3>
-                  <p className="text-sm text-navy-600 dark:text-navy-400 leading-relaxed">{step.desc}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1.5">{step.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -266,7 +266,7 @@ export default function Software() {
       </section>
 
       {/* Analytics & Reports */}
-      <section className="section-padding bg-white dark:bg-navy-950">
+      <section className="section-padding bg-white dark:bg-gray-50">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Analytics & Reports"
@@ -283,11 +283,11 @@ export default function Software() {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="card card-hover p-6"
               >
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-navy-500 to-navy-600 flex items-center justify-center mb-4">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center mb-4">
                   <f.icon className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="font-semibold text-navy-900 dark:text-white mb-1.5">{f.title}</h3>
-                <p className="text-sm text-navy-600 dark:text-navy-400">{f.desc}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1.5">{f.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{f.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -295,7 +295,7 @@ export default function Software() {
       </section>
 
       {/* Built for Performance + Secure by Design + Scalable Architecture */}
-      <section className="section-padding bg-navy-50 dark:bg-navy-900">
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-6">
             {[
@@ -311,11 +311,11 @@ export default function Software() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="card p-6"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-500 to-navy-600 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-display font-bold text-navy-900 dark:text-white mb-3">{item.title}</h3>
-                <p className="text-sm text-navy-600 dark:text-navy-400 leading-relaxed">{item.desc}</p>
+                <h3 className="font-display font-bold text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -323,7 +323,7 @@ export default function Software() {
       </section>
 
       {/* Who Is It For */}
-      <section className="section-padding bg-white dark:bg-navy-950">
+      <section className="section-padding bg-white dark:bg-gray-50">
         <div className="container-custom max-w-4xl">
           <SectionHeading
             eyebrow="Who Is It For?"
@@ -340,10 +340,10 @@ export default function Software() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="card card-hover p-5 text-center"
               >
-                <div className="w-10 h-10 rounded-xl bg-navy-500/10 border border-navy-500/20 flex items-center justify-center mx-auto mb-3">
-                  <Users className="w-5 h-5 text-navy-600 dark:text-navy-400" />
+                <div className="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 </div>
-                <span className="font-semibold text-navy-900 dark:text-white text-sm">{u}</span>
+                <span className="font-semibold text-gray-900 dark:text-white text-sm">{u}</span>
               </motion.div>
             ))}
           </div>
@@ -351,7 +351,7 @@ export default function Software() {
       </section>
 
       {/* Screenshots */}
-      <section className="section-padding bg-navy-950 relative overflow-hidden">
+      <section className="section-padding bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-dark opacity-20" />
         <div className="relative container-custom">
           <SectionHeading
@@ -370,19 +370,19 @@ export default function Software() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="group relative rounded-2xl overflow-hidden border border-white/10"
               >
-                <div className="aspect-video bg-gradient-to-br from-navy-800 to-navy-900 p-6 flex flex-col">
+                <div className="aspect-video bg-gradient-to-br from-brand-800 to-brand-950 p-6 flex flex-col">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-400/60" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-navy-400/60" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-brand-400/60" />
                   </div>
                   <div className="flex-1 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-16 h-16 rounded-2xl bg-navy-500/10 border border-navy-500/20 flex items-center justify-center mx-auto mb-3">
-                        <BarChart3 className="w-8 h-8 text-navy-400" />
+                      <div className="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mx-auto mb-3">
+                        <BarChart3 className="w-8 h-8 text-gray-400" />
                       </div>
                       <div className="text-white font-semibold">{ss.title}</div>
-                      <div className="text-xs text-navy-400 mt-1">{ss.desc}</div>
+                      <div className="text-xs text-gray-400 mt-1">{ss.desc}</div>
                     </div>
                   </div>
                 </div>
@@ -393,21 +393,21 @@ export default function Software() {
       </section>
 
       {/* Brochure download */}
-      <section id="brochure" className="section-padding bg-white dark:bg-navy-950">
+      <section id="brochure" className="section-padding bg-white dark:bg-gray-50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto rounded-3xl bg-gradient-to-br from-navy-50 to-navy-50 dark:from-navy-900 dark:to-navy-800 border border-navy-100 dark:border-navy-700 p-8 lg:p-12 text-center"
+            className="max-w-3xl mx-auto rounded-3xl bg-gradient-to-br from-brand-50 to-brand-50 dark:from-brand-900 dark:to-brand-800 border border-gray-200 dark:border-gray-700 p-8 lg:p-12 text-center"
           >
-            <div className="w-16 h-16 rounded-2xl bg-navy-600 flex items-center justify-center mx-auto mb-5">
+            <div className="w-16 h-16 rounded-2xl bg-brand-600 flex items-center justify-center mx-auto mb-5">
               <FileText className="w-8 h-8 text-white" />
             </div>
-            <h2 className="font-display text-2xl lg:text-3xl font-bold text-navy-900 dark:text-white mb-3">
+            <h2 className="font-display text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3">
               Download the PREEMPTION Brochure
             </h2>
-            <p className="text-navy-600 dark:text-navy-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               Get the full product overview, feature list, technical specifications, and pricing
               information in a single document.
             </p>
@@ -432,7 +432,7 @@ export default function Software() {
       </section>
 
       {/* Pricing placeholder */}
-      <section className="section-padding bg-navy-50 dark:bg-navy-900">
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Pricing"
@@ -447,22 +447,22 @@ export default function Software() {
             ].map((plan) => (
               <div
                 key={plan.name}
-                className={`card p-6 relative ${plan.popular ? 'border-navy-500 ring-2 ring-navy-500/20' : ''}`}
+                className={`card p-6 relative ${plan.popular ? 'border-brand-500 ring-2 ring-brand-500/20' : ''}`}
               >
                 {plan.popular && (
-                  <span className="badge absolute -top-3 left-1/2 -translate-x-1/2 bg-navy-600 text-white">
+                  <span className="badge absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white">
                     Most Popular
                   </span>
                 )}
-                <h3 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-1">{plan.name}</h3>
+                <h3 className="font-display font-bold text-gray-900 dark:text-white text-lg mb-1">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className="font-display text-3xl font-bold text-navy-900 dark:text-white">{plan.price}</span>
-                  <span className="text-navy-500 dark:text-navy-400">{plan.period}</span>
+                  <span className="font-display text-3xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
+                  <span className="text-gray-500 dark:text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-navy-600 dark:text-navy-300">
-                      <Check className="w-4 h-4 text-navy-600 dark:text-navy-400 flex-shrink-0 mt-0.5" />
+                    <li key={f} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                      <Check className="w-4 h-4 text-gray-600 dark:text-gray-400 flex-shrink-0 mt-0.5" />
                       {f}
                     </li>
                   ))}
@@ -483,7 +483,7 @@ export default function Software() {
       </section>
 
       {/* FAQ */}
-      <section className="section-padding bg-white dark:bg-navy-950">
+      <section className="section-padding bg-white dark:bg-gray-50">
         <div className="container-custom max-w-3xl">
           <SectionHeading eyebrow="FAQ" title="Frequently asked questions" />
           <div className="space-y-3">
@@ -493,8 +493,8 @@ export default function Software() {
                   onClick={() => setFaqOpen(faqOpen === i ? null : i)}
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
-                  <span className="font-semibold text-navy-900 dark:text-white">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-navy-400 dark:text-navy-500 flex-shrink-0 transition-transform ${faqOpen === i ? 'rotate-180' : ''}`} />
+                  <span className="font-semibold text-gray-900 dark:text-white">{faq.question}</span>
+                  <ChevronDown className={`w-5 h-5 text-gray-400 dark:text-gray-500 flex-shrink-0 transition-transform ${faqOpen === i ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {faqOpen === i && (
@@ -504,7 +504,7 @@ export default function Software() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="px-5 pb-5 text-navy-600 dark:text-navy-300 leading-relaxed">{faq.answer}</p>
+                      <p className="px-5 pb-5 text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -518,7 +518,7 @@ export default function Software() {
               <Zap className="w-4 h-4" />
               Enquire about PREEMPTION on WhatsApp
             </a>
-            <p className="mt-3 text-sm text-navy-500 dark:text-navy-400">
+            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
               Dedicated support: {COMPANY.phonePreemption}
             </p>
           </div>
@@ -534,31 +534,31 @@ export default function Software() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[60] flex items-center justify-center p-4"
           >
-            <div className="absolute inset-0 bg-navy-950/60 backdrop-blur-sm" onClick={() => setDemoOpen(false)} />
+            <div className="absolute inset-0 bg-gray-50/60 backdrop-blur-sm" onClick={() => setDemoOpen(false)} />
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="relative bg-white dark:bg-navy-900 rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto"
+              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto"
             >
               <div className="p-6 lg:p-8">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="font-display text-xl font-bold text-navy-900 dark:text-white">Book a Demo</h3>
-                    <p className="text-sm text-navy-500 dark:text-navy-400">See PREEMPTION in action</p>
+                    <h3 className="font-display text-xl font-bold text-gray-900 dark:text-white">Book a Demo</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">See PREEMPTION in action</p>
                   </div>
-                  <button onClick={() => setDemoOpen(false)} className="p-2 rounded-lg hover:bg-navy-50 dark:hover:bg-navy-800 text-navy-600 dark:text-navy-300">
+                  <button onClick={() => setDemoOpen(false)} className="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-brand-800 text-gray-600 dark:text-gray-300">
                     <ChevronDown className="w-5 h-5 rotate-180" />
                   </button>
                 </div>
 
                 {demoStatus === 'success' ? (
                   <div className="text-center py-8">
-                    <div className="w-16 h-16 rounded-full bg-navy-100 dark:bg-navy-500/20 flex items-center justify-center mx-auto mb-4">
-                      <Check className="w-8 h-8 text-navy-600 dark:text-navy-400" />
+                    <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-brand-500/20 flex items-center justify-center mx-auto mb-4">
+                      <Check className="w-8 h-8 text-gray-600 dark:text-gray-400" />
                     </div>
-                    <h4 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2">Request received!</h4>
-                    <p className="text-navy-600 dark:text-navy-300 text-sm">We'll contact you within 24 hours to schedule your demo.</p>
+                    <h4 className="font-display font-bold text-gray-900 dark:text-white text-lg mb-2">Request received!</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">We'll contact you within 24 hours to schedule your demo.</p>
                     <button onClick={() => { setDemoOpen(false); setDemoStatus('idle'); }} className="btn-primary mt-6">
                       Close
                     </button>
@@ -605,31 +605,31 @@ function DashboardMockup() {
       transition={{ duration: 0.6 }}
       className="relative max-w-5xl mx-auto"
     >
-      <div className="absolute -inset-6 bg-gradient-to-r from-navy-500/10 to-accent-500/10 blur-3xl rounded-3xl" />
+      <div className="absolute -inset-6 bg-gradient-to-r from-brand-500/10 to-brand-500/10 blur-3xl rounded-3xl" />
       <div className="relative glass rounded-2xl shadow-2xl overflow-hidden">
         {/* Top bar */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-navy-100 dark:border-navy-700">
+        <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-700">
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
             <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-            <div className="w-2.5 h-2.5 rounded-full bg-navy-400" />
+            <div className="w-2.5 h-2.5 rounded-full bg-brand-400" />
           </div>
-          <div className="text-xs text-navy-400 dark:text-navy-500 font-mono">PREEMPTION — Desktop OMS</div>
+          <div className="text-xs text-gray-400 dark:text-gray-500 font-mono">PREEMPTION — Desktop OMS</div>
         </div>
 
         {/* Body */}
-        <div className="p-5 bg-navy-50/50 dark:bg-navy-900/50">
+        <div className="p-5 bg-gray-50/50 dark:bg-gray-900/50">
           {/* KPI row */}
           <div className="grid grid-cols-4 gap-3 mb-4">
             {[
-              { label: 'Portfolio Value', value: '₹1.24Cr', chg: '+24.7%', color: 'text-navy-600 dark:text-navy-400' },
-              { label: 'Active Accounts', value: '7', chg: 'Connected', color: 'text-navy-600 dark:text-navy-300' },
-              { label: 'Open Positions', value: '42', chg: 'Live', color: 'text-navy-600 dark:text-navy-400' },
-              { label: 'Latency', value: '12ms', chg: 'Optimal', color: 'text-accent-600 dark:text-accent-400' },
+              { label: 'Portfolio Value', value: '₹1.24Cr', chg: '+24.7%', color: 'text-gray-600 dark:text-gray-400' },
+              { label: 'Active Accounts', value: '7', chg: 'Connected', color: 'text-gray-600 dark:text-gray-300' },
+              { label: 'Open Positions', value: '42', chg: 'Live', color: 'text-gray-600 dark:text-gray-400' },
+              { label: 'Latency', value: '12ms', chg: 'Optimal', color: 'text-brand-600 dark:text-brand-400' },
             ].map((kpi) => (
-              <div key={kpi.label} className="bg-white dark:bg-navy-800 rounded-xl border border-navy-100 dark:border-navy-700 p-3">
-                <div className="text-[10px] text-navy-400 dark:text-navy-500 mb-1">{kpi.label}</div>
-                <div className="font-display font-bold text-navy-900 dark:text-white text-lg">{kpi.value}</div>
+              <div key={kpi.label} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3">
+                <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1">{kpi.label}</div>
+                <div className="font-display font-bold text-gray-900 dark:text-white text-lg">{kpi.value}</div>
                 <div className={`text-[10px] font-semibold ${kpi.color}`}>{kpi.chg}</div>
               </div>
             ))}
@@ -637,12 +637,12 @@ function DashboardMockup() {
 
           <div className="grid lg:grid-cols-3 gap-3">
             {/* Chart */}
-            <div className="lg:col-span-2 bg-white dark:bg-navy-800 rounded-xl border border-navy-100 dark:border-navy-700 p-4">
+            <div className="lg:col-span-2 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold text-navy-700 dark:text-navy-200">Portfolio Performance</span>
+                <span className="text-xs font-semibold text-gray-700 dark:text-gray-200">Portfolio Performance</span>
                 <div className="flex gap-1.5">
                   {['1D', '1W', '1M', '1Y'].map((t, i) => (
-                    <span key={t} className={`px-2 py-0.5 rounded text-[10px] font-medium ${i === 2 ? 'bg-navy-100 dark:bg-navy-500/20 text-navy-700 dark:text-navy-400' : 'text-navy-400 dark:text-navy-500'}`}>{t}</span>
+                    <span key={t} className={`px-2 py-0.5 rounded text-[10px] font-medium ${i === 2 ? 'bg-gray-100 dark:bg-brand-500/20 text-gray-700 dark:text-gray-400' : 'text-gray-400 dark:text-gray-500'}`}>{t}</span>
                   ))}
                 </div>
               </div>
@@ -666,8 +666,8 @@ function DashboardMockup() {
             </div>
 
             {/* Account list */}
-            <div className="bg-white dark:bg-navy-800 rounded-xl border border-navy-100 dark:border-navy-700 p-4">
-              <div className="text-xs font-semibold text-navy-700 dark:text-navy-200 mb-3">Broker Accounts</div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+              <div className="text-xs font-semibold text-gray-700 dark:text-gray-200 mb-3">Broker Accounts</div>
               <div className="space-y-2">
                 {[
                   { name: 'Zerodha — Acct 1', ret: '+₹2.4L', status: 'green' },
@@ -677,10 +677,10 @@ function DashboardMockup() {
                 ].map((s) => (
                   <div key={s.name} className="flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2">
-                      <span className={`w-1.5 h-1.5 rounded-full ${s.status === 'green' ? 'bg-navy-500' : 'bg-red-400'}`} />
-                      <span className="text-navy-700 dark:text-navy-200">{s.name}</span>
+                      <span className={`w-1.5 h-1.5 rounded-full ${s.status === 'green' ? 'bg-brand-500' : 'bg-red-400'}`} />
+                      <span className="text-gray-700 dark:text-gray-200">{s.name}</span>
                     </div>
-                    <span className={`font-semibold ${s.status === 'green' ? 'text-navy-600 dark:text-navy-400' : 'text-red-500'}`}>{s.ret}</span>
+                    <span className={`font-semibold ${s.status === 'green' ? 'text-gray-600 dark:text-gray-400' : 'text-red-500'}`}>{s.ret}</span>
                   </div>
                 ))}
               </div>
@@ -688,10 +688,10 @@ function DashboardMockup() {
           </div>
 
           {/* Order book */}
-          <div className="mt-3 bg-white dark:bg-navy-800 rounded-xl border border-navy-100 dark:border-navy-700 p-4">
+          <div className="mt-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-semibold text-navy-700 dark:text-navy-200">Live Order Book</span>
-              <span className="text-[10px] text-navy-600 dark:text-navy-400 font-medium">● Real-time</span>
+              <span className="text-xs font-semibold text-gray-700 dark:text-gray-200">Live Order Book</span>
+              <span className="text-[10px] text-gray-600 dark:text-gray-400 font-medium">● Real-time</span>
             </div>
             <div className="space-y-1.5">
               {[
@@ -699,10 +699,10 @@ function DashboardMockup() {
                 { sym: 'BANKNIFTY 53000 PE', type: 'SL-M', qty: '75', status: 'Pending', color: 'amber' },
                 { sym: 'RELIANCE', type: 'Limit', qty: '500', status: 'Executed', color: 'green' },
               ].map((o, i) => (
-                <div key={i} className="flex items-center justify-between text-xs py-1.5 px-2 rounded-lg bg-navy-50 dark:bg-navy-900/50">
-                  <span className="font-mono font-semibold text-navy-800 dark:text-navy-100">{o.sym}</span>
-                  <span className="text-navy-500 dark:text-navy-400">{o.type} · {o.qty}</span>
-                  <span className={`font-semibold ${o.color === 'green' ? 'text-navy-600 dark:text-navy-400' : 'text-amber-500'}`}>{o.status}</span>
+                <div key={i} className="flex items-center justify-between text-xs py-1.5 px-2 rounded-lg bg-gray-50 dark:bg-gray-900/50">
+                  <span className="font-mono font-semibold text-gray-800 dark:text-gray-100">{o.sym}</span>
+                  <span className="text-gray-500 dark:text-gray-400">{o.type} · {o.qty}</span>
+                  <span className={`font-semibold ${o.color === 'green' ? 'text-gray-600 dark:text-gray-400' : 'text-amber-500'}`}>{o.status}</span>
                 </div>
               ))}
             </div>
