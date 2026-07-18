@@ -23,7 +23,7 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
       <Route path="/services/:slug" element={<ServiceDetail />} />
-      <Route path="/software" element={<Software />} />
+      <Route path="/Algo - Software" element={<Software />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
