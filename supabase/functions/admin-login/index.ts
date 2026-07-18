@@ -2,12 +2,26 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   "Access-Control-Allow-Headers":
-    "Content-Type, Authorization, X-Client-Info, Apikey",
+    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
+function jsonResponse(
+  data: Record<string, unknown>,
+  status = 200
+) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/json",
+    },
+  });
+}
+
 Deno.serve(async (req: Request) => {
+  // Handle browser CORS preflight
   if (req.method === "OPTIONS") {
     return new Response("ok", {
       status: 200,
@@ -15,134 +29,187 @@ Deno.serve(async (req: Request) => {
     });
   }
 
+  // Only allow POST
+  if (req.method !== "POST") {
+    return jsonResponse(
+      {
+        success: false,
+        error: "Method not allowed",
+      },
+      405
+    );
+  }
+
   try {
-    const { mobile, password } = await req.json();
+    // Read environment variables
+    const supabaseUrl =
+      Deno.env.get("SUPABASE_URL");
 
-    console.log("========== ADMIN LOGIN ==========");
-    console.log("Entered Mobile:", mobile);
-    console.log("Entered Password:", password);
+    const serviceRoleKey =
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
-    if (!mobile || !password) {
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: "Mobile number and password are required",
-        }),
+    if (!supabaseUrl || !serviceRoleKey) {
+      console.error(
+        "Missing Supabase environment variables"
+      );
+
+      return jsonResponse(
         {
-          status: 400,
-          headers: {
-            ...corsHeaders,
-            "Content-Type": "application/json",
-          },
-        }
+          success: false,
+          error: "Server configuration error",
+        },
+        500
       );
     }
 
-    const supabase = createClient(
-      Deno.env.get("SUPABASE_URL")!,
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+    // Read request body
+    let body: {
+      mobile?: string;
+      password?: string;
+    };
+
+    try {
+      body = await req.json();
+    } catch {
+      return jsonResponse(
+        {
+          success: false,
+          error: "Invalid request body",
+        },
+        400
+      );
+    }
+
+    const mobile =
+      String(body.mobile || "").trim();
+
+    const password =
+      String(body.password || "").trim();
+
+    if (!mobile || !password) {
+      return jsonResponse(
+        {
+          success: false,
+          error:
+            "Mobile number and password are required",
+        },
+        400
+      );
+    }
+
+    console.log(
+      "Admin login attempt:",
+      mobile
     );
 
-    const { data, error } = await supabase
+    // Service-role client runs securely
+    // inside the Edge Function
+    const supabase = createClient(
+      supabaseUrl,
+      serviceRoleKey,
+      {
+        auth: {
+          persistSession: false,
+          autoRefreshToken: false,
+        },
+      }
+    );
+
+    // Find admin
+    const {
+      data: admin,
+      error: databaseError,
+    } = await supabase
       .from("admin_users")
-      .select("*")
+      .select(
+        "id, mobile, name, password_hash"
+      )
       .eq("mobile", mobile)
       .maybeSingle();
 
-    console.log("Database Error:", error);
-    console.log("Database Record:", data);
+    if (databaseError) {
+      console.error(
+        "Admin database error:",
+        databaseError
+      );
 
-    if (error) {
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: error.message,
-        }),
+      return jsonResponse(
         {
-          status: 500,
-          headers: {
-            ...corsHeaders,
-            "Content-Type": "application/json",
-          },
-        }
+          success: false,
+          error: "Unable to process login",
+        },
+        500
       );
     }
 
-    if (!data) {
-      console.log("No admin found.");
+    if (!admin) {
+      console.warn(
+        "Admin not found:",
+        mobile
+      );
 
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: "Admin not found",
-        }),
+      return jsonResponse(
         {
-          status: 401,
-          headers: {
-            ...corsHeaders,
-            "Content-Type": "application/json",
-          },
-        }
+          success: false,
+          error:
+            "Invalid mobile number or password",
+        },
+        401
       );
     }
 
-    console.log("Stored Password:", data.password_hash);
+    // Current password comparison
+    // Works with your existing admin_users data
+    const storedPassword =
+      String(admin.password_hash || "").trim();
 
-    if (String(data.password_hash).trim() !== String(password).trim()) {
-      console.log("Password mismatch");
+    if (storedPassword !== password) {
+      console.warn(
+        "Incorrect password for:",
+        mobile
+      );
 
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: "Password incorrect",
-        }),
+      return jsonResponse(
         {
-          status: 401,
-          headers: {
-            ...corsHeaders,
-            "Content-Type": "application/json",
-          },
-        }
+          success: false,
+          error:
+            "Invalid mobile number or password",
+        },
+        401
       );
     }
 
+    // Generate admin session token
     const token = crypto.randomUUID();
 
-    console.log("Login Successful");
-
-    return new Response(
-      JSON.stringify({
-        success: true,
-        token,
-        admin: {
-          id: data.id,
-          mobile: data.mobile,
-          name: data.name,
-        },
-      }),
-      {
-        status: 200,
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json",
-        },
-      }
+    console.log(
+      "Admin login successful:",
+      mobile
     );
-  } catch (err) {
-    console.error("Unexpected Error:", err);
 
-    return new Response(
-      JSON.stringify({
-        success: false,
-        error: err instanceof Error ? err.message : "Unknown error",
-      }),
+    return jsonResponse({
+      success: true,
+
+      token,
+
+      admin: {
+        id: admin.id,
+        mobile: admin.mobile,
+        name: admin.name,
+      },
+    });
+  } catch (error) {
+    console.error(
+      "Admin login unexpected error:",
+      error
+    );
+
+    return jsonResponse(
       {
-        status: 500,
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json",
-        },
-      }
+        success: false,
+        error: "Internal server error",
+      },
+      500
     );
   }
 });

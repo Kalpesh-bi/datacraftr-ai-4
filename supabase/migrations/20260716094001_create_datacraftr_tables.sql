@@ -6,7 +6,6 @@
   - id (uuid pk), name, email, company, phone, message, service_interest, status, created_at.
 - `consultation_requests`: stores "Get Free Consultation" requests from across the site.
   - id (uuid pk), name, email, company, phone, service_interest, preferred_date, message, status, created_at.
-- `demo_requests`: stores "Book Demo" requests for Preemption Algo Software.
   - id (uuid pk), name, email, company, phone, team_size, message, status, created_at.
 - `newsletter_subscribers`: stores email subscriptions from the footer.
   - id (uuid pk), email (unique), source, created_at.

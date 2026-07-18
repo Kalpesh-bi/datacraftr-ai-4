@@ -82,13 +82,7 @@ export default function FeaturedSoftware() {
                 Explore the Platform
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                to="/software?demo=true"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-all"
-              >
-                <Play className="w-4 h-4 text-navy-400" />
-                Book Demo
-              </Link>
+
             </motion.div>
           </div>
 

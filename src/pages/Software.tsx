@@ -147,10 +147,7 @@ export default function Software() {
               transition={{ delay: 0.3 }}
               className="mt-8 flex flex-col sm:flex-row justify-center gap-3"
             >
-              <button onClick={() => setDemoOpen(true)} className="btn-primary">
-                <Play className="w-4 h-4" />
-                Book Demo
-              </button>
+
               <a href={PREEMPTION_WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-200 text-gray-800 font-semibold hover:border-brand-500 hover:text-brand-600 hover:-translate-y-0.5 transition-all">
                 <Zap className="w-4 h-4 text-brand-600" />
                 Enquire on WhatsApp
