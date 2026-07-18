@@ -3,18 +3,74 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- Favicon -->
+    <!-- ========================================
+         FAVICONS & APP ICONS
+    ========================================= -->
+
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="/favicon-180x180.png" />
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#16a34a" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="/favicon-64x64.png"
+    />
 
-    <!-- SEO -->
-    <title>Datacraftr.ai | AI Software Development, Automation & Data Analytics</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/favicon-48x48.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    />
+
+    <!-- Apple / iPhone -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+
+    <!-- PWA / Android -->
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    />
+
+    <!-- ========================================
+         THEME & VIEWPORT
+    ========================================= -->
+
+    <meta
+      name="theme-color"
+      content="#16a34a"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- ========================================
+         SEO
+    ========================================= -->
+
+    <title>
+      Datacraftr.ai | AI Software Development, Automation & Data Analytics
+    </title>
 
     <meta
       name="description"
@@ -26,59 +82,111 @@
       content="AI Software Development, Website Development, Business Automation, Dashboard Development, Data Analytics, Amazon Marketplace, AI Chatbot, Custom Software, Ecommerce Website, SEO, Datacraftr.ai"
     />
 
-    <meta name="author" content="Datacraftr.ai" />
+    <meta
+      name="author"
+      content="Datacraftr.ai"
+    />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Datacraftr.ai | AI Software Development & Automation" />
+    <!-- ========================================
+         OPEN GRAPH
+    ========================================= -->
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:title"
+      content="Datacraftr.ai | AI Software Development & Automation"
+    />
+
     <meta
       property="og:description"
       content="We build intelligent software, automate business operations, develop AI-powered websites, dashboards, and scalable digital solutions."
     />
-    <meta property="og:url" content="https://datacraftr.ai" />
-    <meta property="og:site_name" content="Datacraftr.ai" />
-    <meta property="og:image" content="https://datacraftr.ai/favicon-512x512.png" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Datacraftr.ai | AI Software Development & Automation" />
+    <meta
+      property="og:url"
+      content="https://datacraftr.ai"
+    />
+
+    <meta
+      property="og:site_name"
+      content="Datacraftr.ai"
+    />
+
+    <meta
+      property="og:image"
+      content="https://datacraftr.ai/android-chrome-512x512.png"
+    />
+
+    <!-- ========================================
+         TWITTER / X
+    ========================================= -->
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Datacraftr.ai | AI Software Development & Automation"
+    />
+
     <meta
       name="twitter:description"
       content="AI-powered websites, business automation, dashboards, analytics, eCommerce solutions and custom software."
     />
-    <meta name="twitter:image" content="https://datacraftr.ai/favicon-512x512.png" />
 
-    <!-- Schema.org -->
+    <meta
+      name="twitter:image"
+      content="https://datacraftr.ai/android-chrome-512x512.png"
+    />
+
+    <!-- ========================================
+         ORGANIZATION SCHEMA
+    ========================================= -->
+
     <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Organization",
-      "name":"Datacraftr.ai",
-      "url":"https://datacraftr.ai",
-      "logo":"https://datacraftr.ai/favicon-512x512.png",
-      "description":"AI Software Development, Business Automation, Data Analytics and Custom Digital Solutions.",
-      "email":"hello@datacraftr.ai",
-      "telephone":"+91-8386074548"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Datacraftr.ai",
+        "url": "https://datacraftr.ai",
+        "logo": "https://datacraftr.ai/android-chrome-512x512.png",
+        "description": "AI Software Development, Business Automation, Data Analytics and Custom Digital Solutions.",
+        "email": "hello@datacraftr.ai",
+        "telephone": "+91-8386074548"
+      }
     </script>
 
+    <!-- ========================================
+         SOFTWARE SCHEMA
+    ========================================= -->
+
     <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"SoftwareApplication",
-      "name":"Preemption Algo Software",
-      "applicationCategory":"BusinessApplication",
-      "operatingSystem":"Web",
-      "creator":{
-        "@type":"Organization",
-        "name":"Datacraftr.ai"
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Preemption Algo Software",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "creator": {
+          "@type": "Organization",
+          "name": "Datacraftr.ai"
+        }
       }
-    }
     </script>
   </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
   </body>
 </html>
