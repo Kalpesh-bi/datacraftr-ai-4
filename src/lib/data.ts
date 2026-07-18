@@ -529,7 +529,7 @@ export type PricingPlan = {
 export const pricingPlans: PricingPlan[] = [
   {
     name: 'Starter',
-    price: '$499',
+    price: '$299',
     period: 'project',
     description: 'Perfect for small businesses needing a professional online presence.',
     features: [
@@ -544,7 +544,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'Growth',
-    price: '$1,499',
+    price: '$999',
     period: 'project',
     description: 'For growing businesses that need advanced features and automation.',
     features: [
