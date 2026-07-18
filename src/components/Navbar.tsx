@@ -7,7 +7,7 @@ import { COMPANY } from '../lib/constants';
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'Algo Software', path: '/Algo - Software' },
+  { label: 'Algo-Software', path: '/Algo-Software' },
   { label: 'Portfolio', path: '/portfolio' },
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Pricing', path: '/pricing' },
