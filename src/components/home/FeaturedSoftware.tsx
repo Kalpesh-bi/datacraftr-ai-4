@@ -78,7 +78,7 @@ export default function FeaturedSoftware() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-8 flex flex-col sm:flex-row gap-3"
             >
-              <Link to="/software" className="btn-primary">
+              <Link to="/Alo software" className="btn-primary">
                 Explore the Platform
                 <ArrowRight className="w-4 h-4" />
               </Link>

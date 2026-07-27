@@ -1,3 +1,4 @@
+import Studio from "./pages/Studio";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 
+
 function AppRoutes() {
   useVisitorTracking();
   return (
@@ -29,6 +31,7 @@ function AppRoutes() {
       <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/about" element={<About />} />
+      <Route path="/studio" element={<Studio />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/admin" element={<Admin />} />
     </Routes>
